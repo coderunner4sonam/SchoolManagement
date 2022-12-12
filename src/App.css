@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  text-decoration: none;
+  color: gold;
+} 
+ 
+.veiwbutton{
+  padding: 12px 20px;
+  font-size: 8px;
+  font-family: sans-serif;
   color: white;
+  background-color: #3498db;
+  border: none;
+
 }
 
-.App-link {
-  color: #61dafb;
+.veiwbutton:hover{
+  background-color: #2980b9;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.editbutton{
+  padding: 12px 20px;
+  font-size: 8px;
+  font-family: sans-serif;
+  color: white;
+  background-color: #c8d9e5;
+  border: none;
+  
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.deletebutton{
+  padding: 12px 20px;
+  font-size: 8px;
+  font-family: sans-serif;
+  color: white;
+  background-color: #d22b19;
+  border: none;
+  
+ 
+}
+
+.form-control{
+  text-align: center;
 }
