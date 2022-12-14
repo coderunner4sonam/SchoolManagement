@@ -50,3 +50,9 @@ a {
 .form-control{
   text-align: center;
 }
+
+.veiwitems{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

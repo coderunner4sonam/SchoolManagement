@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, } from "@material-ui/core";
 import { useState } from "react";
-
+import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -30,11 +30,29 @@ export default function Auth() {
   const classes = useStyles();
   return (
     <div>
+      
+        <Button
+        variant="outlined"
+        color="secondary" 
+        style={{
+          width: 100,
+          height: 42,
+          marginLeft: 15,
+          backgroundColor: "#006B38FF",
+          
+        }}
+        
+      >
+         <NavLink  exact to="/users/add">
+         Add Student
+        </NavLink>
+      </Button>
+
       <Button
         variant="contained"
         style={{
           width: 85,
-          height: 40,
+          height: 42,
           marginLeft: 15,
           backgroundColor: "#006B38FF",
         }}

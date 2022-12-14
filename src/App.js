@@ -1,4 +1,3 @@
-
 import { makeStyles } from "@material-ui/core";
 import Headers from "./Component/Headers";
 import UserTable from "./Component/UserTable";
@@ -18,24 +17,20 @@ const App = () => {
   const classes = useStyles();
   return (
     <div className={classes.App}>
-      
-  
       <BrowserRouter>
-    <Headers />
-      <Routes>
-        <Route path="/" element={ <UserTable/>} />
+        <Headers />
+        <Routes>
+          <Route path="/" element={<UserTable />} />
 
-        {/* <Route path="/contact" element={<Contact />} /> */}
-        <Route path="/users/add" element={<Adduser />} />
-        <Route path="/users/edit/:id" element={<Edituser />} />
-        <Route path="/users/:id" element={<User />} />
-        {/* <Route path="*" element={<PageNotFound />} /> */}
-      </Routes>
-    </BrowserRouter>
+          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/users/add" element={<Adduser />} />
+          <Route path="/users/edit/:id" element={<Edituser />} />
+          <Route path="/users/:id" element={<User />} />
+          {/* <Route path="*" element={<PageNotFound />} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
-
-

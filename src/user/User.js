@@ -3,10 +3,11 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 
 function User() {
-    let{id}=useParams()
+  let { id } = useParams();
   let [user, setUser] = useState({
     name: "",
     username: "",
+    grades:"",
     email: "",
     phone: "",
     website: "",
@@ -20,19 +21,37 @@ function User() {
     setUser(res.data);
   };
   return (
-    <div>
-    <div className="container py-4">
-      <Link className="btn btn-primary" to="/">Back To Home Page</Link>
-      <h1 className="display-4">Student id:{user.id}</h1>
-      <ul className="list-group w-50">
-        <li className="list-group-item">name:{user.name}</li>
-        <li className="list-group-item">username:{user.username}</li>
-        <li className="list-group-item">email:{user.email}</li>
-        <li className="list-group-item">phone:{user.phone}</li>
-        <li className="list-group-item">website:{user.website}</li>
-      </ul>
+    
+    <div className="container">
+          <Link className="btn btn-primary" to="/">
+             Back To Home Page
+          </Link>
+    <div className='w-75 mx-auto shadow p-4 mt-4'>
+        <h2 className='text-center mb-2'>Student id:{user.id}</h2>
+        <form > 
+             <div className='form-group'>
+                <input type={"text"} name="name" className="form-control form-control-lg mb-3" value={user.name}  placeholder='Enter Your Name' />
+            </div>
+            <div className='form-group'>
+                <input type={"text"} name="username" className="form-control form-control-lg mb-3" value={user.username}  placeholder='Enter Your Name' />
+            </div>
+            <div className='form-group'>
+                <input type={"text"} name="grades" className="form-control form-control-lg mb-3" value={user.grades}   placeholder='Enter Your Username' />
+            </div>
+            <div className='form-group'>
+                <input type={"text"} name="email" className="form-control form-control-lg mb-3" value={user.email}   placeholder='Enter Student Grade' />
+            </div>
+            <div className='form-group'>
+                <input type={"email"} name="phone" className="form-control form-control-lg mb-3" value={user.phone}  placeholder='Enter Your E-mail Address' />
+            </div>
+            <div className='form-group'>
+                <input type={"number"} name="website" className="form-control form-control-lg mb-3" value={user.website}  placeholder='Enter Your Phone Number' />
+            </div>
+           
+            {/* <button  className="btn btn-primary btn-block" style={{width:"100%"}} >Save</button> */}
+        </form>
     </div>
-    </div>
+</div>
   );
 }
 
