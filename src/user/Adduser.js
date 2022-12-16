@@ -28,10 +28,8 @@ function Adduser() {
 
   return (
     <div className="container">
-        <Link className="btn btn-primary" to="/">
-             Back To Home Page
-          </Link>
         <div className='w-75 mx-auto shadow p-4 mt-4'>
+        <Link className="btn btn-primary" to="/"> Back To Home Page </Link>
             <h2 className='text-center mb-2'>Add A User</h2>
             <form onSubmit={e=>submitform(e)} >
                 <div className='form-group'>
@@ -52,7 +50,7 @@ function Adduser() {
                 <div className='form-group'>
                     <input type={"text"} name="website" className="form-control form-control-lg mb-3" value={website} onChange={(e)=>handleuserinput(e)} placeholder='Enter Your Website Name' />
                 </div>
-                <button  className="btn btn-primary btn-block" style={{width:"100%"}} >Add Student Details</button>
+                <button  className="btn btn-primary btn-block" style={{width:"100%"}} >Add User</button>
             </form>
         </div>
     </div>

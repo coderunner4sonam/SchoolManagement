@@ -12,6 +12,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
+import { useNavigate } from 'react-router-dom';
+
 
 const useStyles = makeStyles({
   list: {
@@ -25,6 +27,8 @@ const useStyles = makeStyles({
 
 export default function SideBar() {
   const classes = useStyles();
+  const navigate = useNavigate();
+
   const [state, setState] = useState({
     left: false,
   });
@@ -47,22 +51,15 @@ export default function SideBar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['About', 'Contact'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+       
+          <ListItem button  >
+            <ListItemIcon>{<InboxIcon /> }</ListItemIcon>
+            <ListItemText primary="about" onClick={()=>{navigate("/about")}}/>
           </ListItem>
-        ))}
+        
       </List>
       <Divider />
-      {/* <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List> */}
+
     </div>
   );
 

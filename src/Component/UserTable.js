@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Pagination from "@material-ui/lab/Pagination";
 import axios from "axios";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 import {
@@ -65,7 +65,6 @@ export default function UserTable() {
         backgroundColor: "#131111",
       },
       fontFamily: "Montserrat",
-      
     },
     pagination: {
       "& .MuiPaginationItem-root": {
@@ -149,6 +148,7 @@ export default function UserTable() {
                           }}
                         >
                           {index + 1 + (page - 1) * 10}
+                       
                         </TableCell>
                         <TableCell align="right">{element.name}</TableCell>
                         <TableCell
@@ -174,14 +174,14 @@ export default function UserTable() {
                             Veiw
                           </Link>
                           <Link
-                           className="editbutton"
+                            className="editbutton"
                             exact
                             to={`/users/edit/${element.id}`}
                           >
                             Edit
                           </Link>
                           <Link
-                           className="deletebutton"
+                            className="deletebutton"
                             exact
                             onClick={() => deleteUser(element.id)}
                           >

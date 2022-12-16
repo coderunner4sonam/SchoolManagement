@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import axios from "axios"
-import {useNavigate,useParams} from "react-router-dom"
+import {useNavigate,useParams,Link} from "react-router-dom"
+
 
 function Edituser() {
    
@@ -40,6 +41,9 @@ function Edituser() {
 
   return (
     <div className="container">
+        <Link className="btn btn-primary" to="/">
+             Back To Home Page
+          </Link>
         <div className='w-75 mx-auto shadow p-4 mt-4'>
             <h2 className='text-center mb-2'>Edit A User</h2>
             <form onSubmit={e=>submitform(e)} > 
@@ -62,6 +66,8 @@ function Edituser() {
                     <input type={"text"} name="website" className="form-control form-control-lg mb-3" value={website} onChange={(e)=>handleuserinput(e)} placeholder='Enter Your Student class' />
                 </div>
                 <button  className="btn btn-primary btn-block" style={{width:"100%"}} >Save</button>
+              
+         
             </form>
         </div>
     </div>
