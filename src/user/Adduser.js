@@ -49,7 +49,7 @@ function Adduser() {
                 <div className='form-group'>
                     <input type={"text"} name="website" className="form-control form-control-lg mb-3" value={website} onChange={(e)=>handleuserinput(e)} placeholder='Enter Your Website Name' />
                 </div>
-                <button  className="btn btn-primary btn-block">Add User </button>
+                <button  className="btn btn-primary btn-block" style={{width:"100%"}} >Add Student Details</button>
             </form>
         </div>
     </div>

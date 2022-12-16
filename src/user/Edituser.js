@@ -59,7 +59,7 @@ function Edituser() {
                     <input type={"number"} name="phone" className="form-control form-control-lg mb-3" value={phone} onChange={(e)=>handleuserinput(e)} placeholder='Enter Your Phone Number' />
                 </div>
                 <div className='form-group'>
-                    <input type={"text"} name="website" className="form-control form-control-lg mb-3" value={website} onChange={(e)=>handleuserinput(e)} placeholder='Enter Your Website Name' />
+                    <input type={"text"} name="website" className="form-control form-control-lg mb-3" value={website} onChange={(e)=>handleuserinput(e)} placeholder='Enter Your Student class' />
                 </div>
                 <button  className="btn btn-primary btn-block" style={{width:"100%"}} >Save</button>
             </form>

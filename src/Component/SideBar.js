@@ -47,7 +47,7 @@ export default function SideBar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Crypto', 'Stocks', 'Comodity', 'Currency'].map((text, index) => (
+        {['About', 'Contact'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
@@ -55,14 +55,14 @@ export default function SideBar() {
         ))}
       </List>
       <Divider />
-      <List>
+      {/* <List>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </div>
   );
 
@@ -70,15 +70,15 @@ export default function SideBar() {
     <div>
       {['left',].map((anchor) => (
         <React.Fragment key={anchor}>
-            
+            {/* Hambarger */} 
             <Button onClick={toggleDrawer(anchor, true)}>
-                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"> 
                     <MenuIcon />
                 </IconButton>
             </Button>
             <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}
-            </Drawer>
+            </Drawer> 
         </React.Fragment>
       ))}
     </div>

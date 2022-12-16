@@ -21,7 +21,6 @@ const App = () => {
         <Headers />
         <Routes>
           <Route path="/" element={<UserTable />} />
-
           {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="/users/add" element={<Adduser />} />
           <Route path="/users/edit/:id" element={<Edituser />} />

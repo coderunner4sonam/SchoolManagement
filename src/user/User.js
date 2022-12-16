@@ -10,7 +10,7 @@ function User() {
     grades:"",
     email: "",
     phone: "",
-    website: "",
+    website:""
   });
   useEffect(() => {
     loaduser();
@@ -45,7 +45,7 @@ function User() {
                 <input type={"email"} name="phone" className="form-control form-control-lg mb-3" value={user.phone}  placeholder='Enter Your E-mail Address' />
             </div>
             <div className='form-group'>
-                <input type={"number"} name="website" className="form-control form-control-lg mb-3" value={user.website}  placeholder='Enter Your Phone Number' />
+                <input type={"text"} name="website" className="form-control form-control-lg mb-3" value={user.website}  placeholder='Enter Your  website ' />
             </div>
            
             {/* <button  className="btn btn-primary btn-block" style={{width:"100%"}} >Save</button> */}

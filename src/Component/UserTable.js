@@ -113,6 +113,7 @@ export default function UserTable() {
                     "Grades",
                     "Email Id",
                     "Phone Number",
+                    "Studnet Class",
                     "Action",
                   ].map((head) => (
                     <TableCell
@@ -163,6 +164,7 @@ export default function UserTable() {
                         <TableCell align="right">{element.grades}</TableCell>
                         <TableCell align="right">{element.email}</TableCell>
                         <TableCell align="right">{element.phone}</TableCell>
+                        <TableCell align="right">{element.website}</TableCell>
                         <TableCell align="right">
                           <Link
                             className="veiwbutton"

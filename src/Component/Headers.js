@@ -58,7 +58,7 @@ const Headers = () => {
             >
               <InputBase
                 sx={{ ml: 1, flex: 1 }}
-                placeholder="Search Google Maps"
+                placeholder="Search Student By Name"
                 inputProps={{ "aria-label": "search google maps" }}
                 onChange={(e)=>setText(e.target.value)}
               />
