@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {useNavigate} from "react-router-dom"
+import {useNavigate,Link} from "react-router-dom"
 import axios from "axios";
 
 function Adduser() {
@@ -28,6 +28,9 @@ function Adduser() {
 
   return (
     <div className="container">
+        <Link className="btn btn-primary" to="/">
+             Back To Home Page
+          </Link>
         <div className='w-75 mx-auto shadow p-4 mt-4'>
             <h2 className='text-center mb-2'>Add A User</h2>
             <form onSubmit={e=>submitform(e)} >
