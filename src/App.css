@@ -9,7 +9,21 @@ a {
   text-decoration: none;
   color: black;
 } 
- 
+
+/* ******* Page Not Found ***************** */
+.paagenotfound{
+    position: fixed;
+    background-color: #333; 
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(15, 12, 12);
+}
+/* Page Not Found end */
+
 .veiwbutton{
   padding: 12px 20px;
   font-size: 8px;

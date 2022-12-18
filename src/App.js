@@ -7,6 +7,7 @@ import Adduser from "./user/Adduser";
 import User from "./user/User";
 import About from "./Component/About";
 import Loginpage from "./user/Loginpage";
+import PageNotFound from "./Component/PageNotFound";
 // import About from "./Component/About";
 
 
@@ -32,7 +33,7 @@ const App = () => {
           <Route path="/users/edit/:id" element={<Edituser />} />
           <Route path="/users/:id" element={<User />} />
           
-          {/* <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
