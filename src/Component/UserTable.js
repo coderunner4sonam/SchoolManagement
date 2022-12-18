@@ -40,7 +40,6 @@ export default function UserTable() {
     console.log(text);
 
     userfilter = user.filter((ele) => {
-      //return ele.name.toLowerCase().includes(text.toLowerCase());
       return ele.name.toLowerCase().includes(text.toLowerCase());
     });
   } else {

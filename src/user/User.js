@@ -48,7 +48,6 @@ function User() {
                 <input type={"text"} name="website" className="form-control form-control-lg mb-3" value={user.website}  placeholder='Enter Your  website ' />
             </div>
            
-            {/* <button  className="btn btn-primary btn-block" style={{width:"100%"}} >Save</button> */}
         </form>
     </div>
 </div>

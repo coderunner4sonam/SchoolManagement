@@ -46,6 +46,7 @@ export default function Auth() {
          <NavLink  exact to="/users/add">
          Add Student
         </NavLink>
+       
       </Button>
 
       <Button
@@ -58,7 +59,9 @@ export default function Auth() {
         }}
         
       >
-        Login
+         <NavLink  exact to="/users/loginpage">
+         Login
+        </NavLink>
       </Button>
       
     </div>

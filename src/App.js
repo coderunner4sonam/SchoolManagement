@@ -6,7 +6,9 @@ import Edituser from "./user/Edituser";
 import Adduser from "./user/Adduser";
 import User from "./user/User";
 import About from "./Component/About";
+import Loginpage from "./user/Loginpage";
 // import About from "./Component/About";
+
 
 const App = () => {
   const useStyles = makeStyles(() => ({
@@ -26,6 +28,7 @@ const App = () => {
           {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="/about" element={<About/>} />
           <Route path="/users/add" element={<Adduser />} />
+          <Route path="/users/loginpage" element={<Loginpage />} />
           <Route path="/users/edit/:id" element={<Edituser />} />
           <Route path="/users/:id" element={<User />} />
           
