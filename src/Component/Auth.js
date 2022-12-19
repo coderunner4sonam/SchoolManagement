@@ -32,10 +32,10 @@ export default function Auth() {
     <div>
       
         <Button
-        variant="outlined"
+        // variant="outlined"
         color="secondary" 
         style={{
-          width: 100,
+          width: "auto",
           height: 42,
           marginLeft: 15,
           backgroundColor: "#006B38FF",
