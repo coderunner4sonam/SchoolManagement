@@ -13,7 +13,7 @@ import {
 } from "@material-ui/core/styles";
 import SideBar from "./SideBar";
 import Auth from "./Auth";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,7 +36,7 @@ const darkTheme = createTheme({
 });
 
 const Headers = () => {
-  // const navigate =useNavigate();
+  const navigate =useNavigate();
   const classes = useStyles();
   const {text,setText}=useContext(globalState); 
 
@@ -47,7 +47,7 @@ const Headers = () => {
         <Container>
           <Toolbar>
             <SideBar/>
-            <Typography variant="h6" className={classes.title} >
+            <Typography variant="h6" className={classes.title} onClick={()=>{navigate("/")}}>
               SManagement
             </Typography>
 

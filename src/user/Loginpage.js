@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {useNavigate,Link} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 
 function Loginpage() {
     let navigate = useNavigate()
@@ -25,7 +25,7 @@ function Loginpage() {
   return (
     <div className="container">
         <div className='w-75 mx-auto shadow p-4 mt-4'>
-        <Link className="btn btn-primary" to="/"> Back To Home Page </Link>
+     
             <h2 className='text-center mb-2'>Login Page</h2>
             <form onSubmit={e=>submitform(e)} >
                 <div className='form-group'>

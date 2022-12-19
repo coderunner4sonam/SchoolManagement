@@ -22,7 +22,7 @@ import { globalState } from "../Context";
 
 export default function UserTable() {
   const [page, setPage] = useState(1);
-
+  const {count,setCount}=useContext(globalState); 
   let [user, setUser] = useState([]);
 
   let [loading, setloading] = useState(false); //page load
@@ -45,6 +45,8 @@ export default function UserTable() {
   } else {
     userfilter = [...user];
   }
+  
+  setCount(user.length);
   console.log(user, "user");
   console.log(userfilter, "userfilter");
 
