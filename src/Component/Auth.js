@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: 400,
     backgroundColor: theme.palette.background.paper,
+    backgroundColor:"black",
     color: "white",
     borderRadius: 10,
   },
@@ -32,7 +33,6 @@ export default function Auth() {
     <div>
       
         <Button
-        // variant="outlined"
         color="secondary" 
         style={{
           width: "auto",

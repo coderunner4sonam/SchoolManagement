@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import {useNavigate} from "react-router-dom"
 import axios from "axios";
+import { globalState } from '../Context';
+import { useContext } from 'react';
 
 function Adduser() {
-    let navigate = useNavigate()
+    let navigate = useNavigate();
+    const {store,setStore}=useContext(globalState);
+ 
     let[user,setUser]=useState({
         name:"",
         username:"",
@@ -13,7 +17,7 @@ function Adduser() {
         website:""
 
     })
-
+    
     let {name,username,grades,email,phone,website}=user
     
     function handleuserinput(e){
@@ -22,7 +26,8 @@ function Adduser() {
 
     let submitform = async e =>{
         e.preventDefault();
-        await axios.post("http://localhost:3003/users",user)
+        // await axios.post("http://localhost:3003/users",user)
+        setStore([...store,user]);
         navigate('/')
     }
 

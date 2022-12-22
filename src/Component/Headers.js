@@ -19,10 +19,12 @@ import { useNavigate } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   title: {
     flex: 1,
-    color: "blue",
+    color: "lightblue",
     fontFamily: "Montserrat",
     fontWeight: "bold",
     cursor: "pointer",
+    fontSize:"32px"
+
   },
 }));
 
@@ -39,7 +41,6 @@ const Headers = () => {
   const navigate =useNavigate();
   const classes = useStyles();
   const {text,setText}=useContext(globalState); 
-
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -62,7 +63,7 @@ const Headers = () => {
             >
               <InputBase
                 sx={{ ml: 1, flex: 1 }}
-                placeholder="Search Student By Name"
+                placeholder="Search Student By Their First Name"
                 inputProps={{ "aria-label": "search google maps" }}
                 onChange={(e)=>setText(e.target.value)}
               />

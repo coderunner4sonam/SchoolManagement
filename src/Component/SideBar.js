@@ -7,7 +7,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import InfoIcon from '@mui/icons-material/Info';
 import MailIcon from '@material-ui/icons/Mail';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -55,13 +55,13 @@ export default function SideBar() {
       <List>
        
           <ListItem button  >
-            <ListItemIcon>{<InboxIcon /> }</ListItemIcon>
+            <ListItemIcon>{<InfoIcon /> }</ListItemIcon>
             <ListItemText primary="about" onClick={()=>{navigate("/about")}}/>
             
           </ListItem>
           <ListItem button  >
           <ListItemIcon>{<FaceIcon/>}</ListItemIcon> 
-            <ListItemText primary="Total No. Student" /><span style={{color:"green"}}>{count}</span> 
+            <ListItemText primary="Total No. Student" /><span style={{color:"lightgreen",fontSize:"25px"}}>{count}</span> 
           </ListItem>
       </List>
       <Divider />

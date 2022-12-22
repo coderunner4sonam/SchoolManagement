@@ -22,17 +22,19 @@ import { globalState } from "../Context";
 
 export default function UserTable() {
   const [page, setPage] = useState(1);
-  const {count,setCount}=useContext(globalState); 
+  const {setCount}=useContext(globalState); 
   let [user, setUser] = useState([]);
-
+  const {store,setStore}=useContext(globalState);
   let [loading, setloading] = useState(false); //page load
-
   let userfilter = [];
-  const { text } = useContext(globalState);
 
-  const loaduser = async () => {
-    let result = await axios.get("http://localhost:3003/users");
-    setUser(result.data.reverse());
+  const { text } = useContext(globalState); // searching 
+
+  const loaduser = () => {
+    // let result = await axios.get("http://localhost:3003/users");
+
+    setUser(store.reverse());
+    console.log(user);
     setloading(false);
   };
 
@@ -56,7 +58,7 @@ export default function UserTable() {
     setTimeout(() => {
       loaduser();
     }, 2000);
-  }, []);
+  }, [store]);
 
   const useStyles = makeStyles({
     row: {
@@ -89,11 +91,15 @@ export default function UserTable() {
     setPage(1);
   }, []);
 
-  const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:3003/users/${id}`);
+  const deleteUser = (id) => {
+    // await axios.delete(`http://localhost:3003/users/${id}`);
+    let temp = store.filter((element,idx)=>{
+      return idx!==id;
+    });
+    setStore(temp);
     loaduser();
   };
-
+  
   return (
     <ThemeProvider theme={darkTheme}>
       <Container style={{ textAlign: "center" }}>
@@ -101,7 +107,7 @@ export default function UserTable() {
           {loading ? (
             <LinearProgress style={{ backgroundColor: "#006B38FF" }} />
           ) : userfilter?.length === 0 ? (
-            <h1>Seems Nothing Found :(</h1>
+            <h1>Seems Nothing Found :(</h1> // writing wrong name 
           ) : (
             <Table aria-label="simple table">
               <TableHead style={{ backgroundColor: "#006B38FF" }}>
@@ -123,16 +129,17 @@ export default function UserTable() {
                         fontFamily: "Montserrat",
                       }}
                       key={head}
-                      align={head === "Coin" ? "inherit" : "right"}
+                      align={ head==="Action"? "center":"right" } 
                     >
-                      {head}
+                      {/* tablehead */}
+                      {head} 
                     </TableCell>
                   ))}
                 </TableRow>
               </TableHead>
 
               <TableBody>
-                {userfilter
+                {userfilter 
                   .slice((page - 1) * 10, (page - 1) * 10 + 10) //0,10 ,11,20
                   .map((element, index) => {
                     return (
@@ -148,8 +155,8 @@ export default function UserTable() {
                             gap: 15,
                           }}
                         >
-                          {index + 1 + (page - 1) * 10}
-                       
+                          {index + 1 + (page - 1) * 10}  
+                           {/* total number of student data in one page - start from 1-10*/} 
                         </TableCell>
                         <TableCell align="right">{element.name}</TableCell>
                         <TableCell
@@ -170,21 +177,21 @@ export default function UserTable() {
                           <Link
                             className="veiwbutton"
                             exact
-                            to={`/users/${element.id}`}
+                            to={`/users/${element.name}`}
                           >
                             Veiw
                           </Link>
                           <Link
                             className="editbutton"
                             exact
-                            to={`/users/edit/${element.id}`}
+                            to={`/users/edit/${element.name}`}
                           >
                             Edit
                           </Link>
                           <Link
                             className="deletebutton"
                             exact
-                            onClick={() => deleteUser(element.id)}
+                            onClick={() => deleteUser(index)}
                           >
                             Delete
                           </Link>

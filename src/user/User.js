@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import { globalState } from "../Context";
 
 function User() {
   let { id } = useParams();
+  console.log(id);
+  const {store,setStore}=useContext(globalState);
   let [user, setUser] = useState({
     name: "",
     username: "",
@@ -12,14 +15,22 @@ function User() {
     phone: "",
     website:""
   });
+
   useEffect(() => {
     loaduser();
   }, []);
 
-  const loaduser = async () => {
-    let res = await axios.get(`http://localhost:3003/users/${id}`);
-    setUser(res.data);
+  const loaduser = () => {
+    // await axios.delete(`http://localhost:3003/users/${id}`);
+    for(let i=0;i<store.length;i++){
+      if(store[i].name===id){
+        setUser(store[i]);
+      }
+    }
+       
+    console.log(user);
   };
+
   return (
     
     <div className="container">
