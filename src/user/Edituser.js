@@ -31,7 +31,6 @@ function Edituser() {
 
   let submitform = (e) => {
     e.preventDefault();
-    // await axios.put(`http://localhost:3003/users/${id}`,user)
     
     let temp = [...store];//10 array in store
     console.log(store);

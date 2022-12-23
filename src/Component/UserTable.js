@@ -54,10 +54,10 @@ export default function UserTable() {
 
   useEffect(() => {
     setloading(true);
-
+ 
     setTimeout(() => {
       loaduser();
-    }, 2000);
+    }, 200);
   }, [store]);
 
   const useStyles = makeStyles({
@@ -92,7 +92,6 @@ export default function UserTable() {
   }, []);
 
   const deleteUser = (id) => {
-    // await axios.delete(`http://localhost:3003/users/${id}`);
     let temp = store.filter((element,idx)=>{
       return idx!==id;
     });

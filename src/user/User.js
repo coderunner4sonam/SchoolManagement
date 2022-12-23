@@ -21,7 +21,6 @@ function User() {
   }, []);
 
   const loaduser = () => {
-    // await axios.delete(`http://localhost:3003/users/${id}`);
     for(let i=0;i<store.length;i++){
       if(store[i].name===id){
         setUser(store[i]);
@@ -34,9 +33,7 @@ function User() {
   return (
     
     <div className="container">
-          <Link className="btn btn-primary" to="/">
-             Back To Home Page
-          </Link>
+        
     <div className='w-75 mx-auto shadow p-4 mt-4'>
         <h2 className='text-center mb-2'>Student id:{user.id}</h2>
         <form > 

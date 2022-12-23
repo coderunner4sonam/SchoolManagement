@@ -8,7 +8,6 @@ import User from "./user/User";
 import About from "./Component/About";
 import Loginpage from "./user/Loginpage";
 import PageNotFound from "./Component/PageNotFound";
-// import About from "./Component/About";
 
 
 const App = () => {
@@ -26,7 +25,6 @@ const App = () => {
         <Headers />
         <Routes>
           <Route path="/" element={<UserTable />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="/about" element={<About/>} />
           <Route path="/users/add" element={<Adduser />} />
           <Route path="/users/loginpage" element={<Loginpage />} />

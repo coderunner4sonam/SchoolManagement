@@ -26,7 +26,6 @@ function Adduser() {
 
     let submitform = async e =>{
         e.preventDefault();
-        // await axios.post("http://localhost:3003/users",user)
         setStore([...store,user]);
         navigate('/')
     }
