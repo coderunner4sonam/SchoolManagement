@@ -362,24 +362,7 @@ const intitaldata = [
     id: 13,
     grades: "D",
   },
-  {
-    name: "vikas",
-    username: "gklkgkk",
-    email: "Test@gmail.com",
-    phone: "59565695444",
-    website: "class 10",
-    id: 20,
-    grades: "D",
-  },
-  {
-    name: "Anupam",
-    username: "dfsdfdsf",
-    grades: "B",
-    email: "Anupam@gmail.com",
-    phone: "59565695444",
-    website: "class 10",
-    id: 22,
-  },
+
 ];
 
 function Context({ children }) {

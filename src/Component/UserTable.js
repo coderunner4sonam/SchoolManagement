@@ -33,7 +33,7 @@ export default function UserTable() {
   const loaduser = () => {
     // let result = await axios.get("http://localhost:3003/users");
 
-    setUser(store.reverse());
+    setUser(store);
     console.log(user);
     setloading(false);
   };
