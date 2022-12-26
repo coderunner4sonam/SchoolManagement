@@ -26,7 +26,7 @@ function Adduser() {
 
     let submitform = async e =>{
         e.preventDefault();
-        setStore([...store,user]);
+        setStore([user,...store]);
         navigate('/')
     }
 

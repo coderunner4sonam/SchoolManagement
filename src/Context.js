@@ -317,51 +317,8 @@ const intitaldata = [
     id: 8,
     grades: "A",
   },
-  {
-    name: "vikas",
-    username: "gklkgkk",
-    email: "bittu@gmail.com",
-    phone: "59565695444",
-    website: "class 12",
-    id: 9,
-    grades: "A",
-  },
-  {
-    name: "Sonam",
-    username: "dfsdfdsf",
-    email: "Test@gmail.com",
-    phone: "59565695444",
-    website: "class 12",
-    id: 10,
-    grades: "B",
-  },
-  {
-    name: "vikas",
-    username: "gklkgkk",
-    email: "Test@gmail.com",
-    phone: "59565695444",
-    website: "class 10",
-    id: 11,
-    grades: "C",
-  },
-  {
-    name: "vikas",
-    username: "gklkgkk",
-    email: "Test@gmail.com",
-    phone: "59565695444",
-    website: "class 10",
-    id: 12,
-    grades: "B",
-  },
-  {
-    name: "name",
-    username: "dfsdfdsf",
-    email: "Test@gmail.com",
-    phone: "59565695444",
-    website: "class 10",
-    id: 13,
-    grades: "D",
-  },
+ 
+  
 
 ];
 
