@@ -1,4 +1,4 @@
-import { AppBar, Container, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Container, Toolbar, Typography } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";

@@ -329,12 +329,11 @@ function Context({ children }) {
   const [store, setStore] = useState(intitaldata);
 
   return (
-    <globalState.Provider
-      value={{ count, setCount, fvrt, setFvrt, text, setText, store, setStore }}
-    >
+    <globalState.Provider value={{ count, setCount, fvrt, setFvrt, text, setText, store, setStore }} >
       {children}
     </globalState.Provider>
   );
 }
 
 export default Context;
+
