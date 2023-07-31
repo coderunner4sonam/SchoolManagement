@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@mui/material/styles";
 import Headers from "./Component/Headers";
 import UserTable from "./Component/UserTable";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -8,7 +8,6 @@ import User from "./user/User";
 import About from "./Component/About";
 import Loginpage from "./user/Loginpage";
 import PageNotFound from "./Component/PageNotFound";
-
 
 const App = () => {
   const useStyles = makeStyles(() => ({
