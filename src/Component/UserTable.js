@@ -231,12 +231,10 @@
 // __________________________________________
 
 import React, { useContext, useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Pagination from "@material-ui/lab/Pagination";
+import { makeStyles } from "@mui/material/styles";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../App.css";
-
 import {
   Container,
   createTheme,
@@ -249,7 +247,10 @@ import {
   TableContainer,
   Table,
   Paper,
-} from "@material-ui/core";
+} from "@mui/material"; // Use the correct package name
+
+// Your component code here...
+
 import { globalState } from "../Context";
 
 export default function UserTable() {
