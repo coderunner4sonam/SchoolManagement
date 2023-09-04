@@ -10,7 +10,7 @@ import {
   createTheme,
   makeStyles,
   ThemeProvider,
-} from "@mui/material/styles";
+} from "@material-ui/core/styles";
 import SideBar from "./SideBar";
 import Auth from "./Auth";
 import { useNavigate } from "react-router-dom";
