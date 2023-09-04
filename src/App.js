@@ -1,4 +1,4 @@
-import { makeStyles } from "@mui/material/styles";
+import { makeStyles } from "@material-ui/core";
 import Headers from "./Component/Headers";
 import UserTable from "./Component/UserTable";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

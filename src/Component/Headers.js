@@ -1,7 +1,7 @@
-import { AppBar, Container, Toolbar, Typography } from "@mui/material";
+import { AppBar, Container, Toolbar, Typography } from "@material-ui/core";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
-import SearchIcon from "@mui/icons-material/Search";
+// import {SearchIcon} from '@material-ui/icons';
 import Paper from '@mui/material/Paper';
 import {useContext} from "react"
 import { globalState } from "../Context";
@@ -10,11 +10,10 @@ import {
   createTheme,
   makeStyles,
   ThemeProvider,
-} from "@mui/material/styles";
+} from "@material-ui/core";
 import SideBar from "./SideBar";
 import Auth from "./Auth";
 import { useNavigate } from "react-router-dom";
-
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -68,7 +67,7 @@ const Headers = () => {
                 onChange={(e)=>setText(e.target.value)}
               />
               <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-                <SearchIcon />
+                {/* <SearchIcon /> */}
               </IconButton>
             </Paper>
               <Auth/>
